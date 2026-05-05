@@ -36,6 +36,7 @@ async function boot() {
   const content = document.getElementById('content');
   content.classList.add('visible');
   monitorScreen.classList.remove('hidden');
+  document.getElementById('terminal').classList.add('hidden');
   inputField.focus();
 }
 
@@ -126,6 +127,28 @@ inputField.addEventListener('blur', () => {
 
 document.getElementById('terminal').addEventListener('click', () => {
   inputField.focus();
+});
+
+const menuToggle = document.getElementById('menu-toggle');
+const menuDropdown = document.getElementById('menu-dropdown');
+
+menuToggle?.addEventListener('click', (event) => {
+  event.stopPropagation();
+  menuDropdown?.classList.toggle('visible');
+});
+
+document.addEventListener('click', () => {
+  menuDropdown?.classList.remove('visible');
+});
+
+menuDropdown?.addEventListener('click', (event) => {
+  event.stopPropagation();
+});
+
+menuDropdown?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    menuDropdown.classList.remove('visible');
+  });
 });
 
 boot();
