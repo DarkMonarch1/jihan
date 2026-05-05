@@ -7,10 +7,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Main shell for the page content -->
-  <div class="page-shell">
-    <!-- Hero / top section with name and short description -->
-    <header class="hero">
+  <div id="terminal">
+    <div id="boot-sequence"></div>
+    <div id="content" class="terminal-content hidden">
+      <div id="terminal-output">
+        <p>> Welcome to User-Linux 1.0 LTS</p>
+        <p>> Type <span class="inline-code">help</span> for a list of commands.</p>
+      </div>
+      <div id="terminal-prompt">
+        <span class="prompt-label">user@portfolio:~$</span>
+        <input id="terminal-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter command..." />
+      </div>
+    </div>
+  </div>
+
+  <div id="monitor-screen" class="hidden">
+    <!-- Main shell for the page content -->
+    <div class="page-shell">
+      <!-- Hero / top section with name and short description -->
+      <header class="hero">
       <nav class="top-nav" aria-label="Main navigation">
         <a class="nav-link" href="#skills">View skills</a>
         <a class="nav-link" href="#projects">Show work</a>
