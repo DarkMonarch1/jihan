@@ -525,3 +525,28 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Ensure body and main containers adapt to mobile viewport */
+body {
+  min-height: 100vh;
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport */
+}
+
+#terminal, #monitor-screen {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Mobile-specific fixes for Android phones (portrait orientation) */
+@media (max-width: 768px) and (orientation: portrait) {
+  body, #terminal, #monitor-screen {
+    min-height: 100vh;
+    height: auto; /* Prevent fixed height issues */
+    overflow-y: auto;
+  }
+  
+  /* If the hero or sections are causing cutoff, ensure they stack properly */
+  .hero, .section {
+    min-height: auto;
+  }
+}
