@@ -32,7 +32,7 @@ tabButtons.forEach((button) => {
 
 const unlockButton = document.getElementById('unlock-slider-button');
 const lockNotice = document.getElementById('slider-lock-notice');
-const sliderUnlockHash = 2289269889;
+const sliderUnlockHash = 767007771;
 
 function hashKey(value) {
   return value.split('').reduce((hash, char) => ((hash * 31) + char.charCodeAt(0)) >>> 0, 2166136261);
