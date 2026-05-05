@@ -145,16 +145,20 @@ body {
 }
 
 #monitor-screen {
-  max-width: 1140px;
+  position: fixed;
+  inset: 0;
   width: 100%;
-  height: 400px;
-  overflow-y: scroll;
-  border: 20px solid #222;
-  border-radius: 30px;
-  background: #111;
-  transform: perspective(1000px) rotateX(2deg);
-  box-shadow: inset 0 0 40px black;
-  margin: 0 auto 3rem;
+  height: 100%;
+  overflow-y: auto;
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 30%),
+              radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.10), transparent 18%),
+              linear-gradient(180deg, #02050b 0%, #090b10 100%);
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  transform: none;
+  box-shadow: none;
+  z-index: 1;
 }
 
 #monitor-screen::-webkit-scrollbar {
@@ -166,8 +170,8 @@ body {
 }
 
 #monitor-screen .page-shell {
-  width: min(1080px, calc(100% - 2rem));
-  padding: 2rem 1rem 3rem;
+  width: min(1140px, calc(100% - 4rem));
+  padding: 3rem 2rem 4rem;
   margin: 0 auto;
 }
 
@@ -195,29 +199,64 @@ body {
   box-shadow: var(--shadow);
 }
 
-.top-nav {
+.menu-container {
   position: absolute;
   top: 1.5rem;
-  left: 1.5rem;
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: flex-start;
+  z-index: 3;
 }
 
-.nav-link {
-  padding: 0.75rem 1rem;
+.menu-toggle {
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(125, 211, 252, 0.15);
+  transform: translateY(-1px);
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  min-width: 180px;
+}
+
+.menu-dropdown.visible {
+  display: flex;
+}
+
+.menu-item {
   color: var(--text);
   text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link:focus-visible {
-  background: rgba(125, 211, 252, 0.18);
-  transform: translateY(-1px);
+.menu-item:hover,
+.menu-item:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
 }
 
 .hero-copy {
