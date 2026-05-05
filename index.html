@@ -40,7 +40,7 @@
       </div>
     </section>
 
-    <!-- Skills section: the interactive slider/tab area -->
+    <!-- Skills section: fixed skill levels with category tabs -->
     <section class="section skills" id="skills">
       <div class="section-copy">
         <h2>Skills</h2>
@@ -50,13 +50,6 @@
       </div>
 
       <div class="skills-card">
-        <div class="slider-lock-panel">
-          <p class="slider-lock-notice" id="slider-lock-notice">
-          
-          </p>
-          
-        </div>
-
         <!-- Tab buttons for different skill categories -->
         <div class="skills-tabs" role="tablist" aria-label="Skill categories">
           <button class="tab active" data-tab="languages" type="button">Languages</button>
@@ -64,26 +57,42 @@
           <button class="tab" data-tab="tools" type="button">Tools</button>
         </div>
 
-        <!-- Languages panel: sliders can be adjusted to reflect your strength -->
+        <!-- Languages panel: fixed skill levels -->
         <div class="skill-panel active" id="languages" role="tabpanel">
           <div class="skill-row">
-            <label for="java-slider">Java</label>
-            <input id="java-slider" class="skill-slider" type="range" min="0" max="100" value="70" />
+            <div>
+              <label>Java</label>
+              <div class="skill-meter">
+                <span class="skill-meter-fill" style="width: 90%"></span>
+              </div>
+            </div>
             <span class="skill-value">90%</span>
           </div>
           <div class="skill-row">
-            <label for="python-slider">Python</label>
-            <input id="python-slider" class="skill-slider" type="range" min="0" max="100" value="85" />
+            <div>
+              <label>Python</label>
+              <div class="skill-meter">
+                <span class="skill-meter-fill" style="width: 85%"></span>
+              </div>
+            </div>
             <span class="skill-value">85%</span>
           </div>
           <div class="skill-row">
-            <label for="cpp-slider">C++</label>
-            <input id="cpp-slider" class="skill-slider" type="range" min="0" max="100" value="60" />
+            <div>
+              <label>C++</label>
+              <div class="skill-meter">
+                <span class="skill-meter-fill" style="width: 60%"></span>
+              </div>
+            </div>
             <span class="skill-value">60%</span>
           </div>
           <div class="skill-row">
-            <label for="js-slider">JavaScript</label>
-            <input id="js-slider" class="skill-slider" type="range" min="0" max="100" value="75" />
+            <div>
+              <label>JavaScript</label>
+              <div class="skill-meter">
+                <span class="skill-meter-fill" style="width: 65%"></span>
+              </div>
+            </div>
             <span class="skill-value">65%</span>
           </div>
         </div>
