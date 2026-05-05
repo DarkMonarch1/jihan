@@ -35,7 +35,7 @@ async function boot() {
   container.style.display = 'none';
   const content = document.getElementById('content');
   content.classList.add('visible');
-  monitorScreen.style.display = 'block';
+  monitorScreen.classList.remove('hidden');
   inputField.focus();
 }
 
