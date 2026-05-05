@@ -200,29 +200,27 @@ body {
   font-weight: 600;
 }
 
-.skill-slider {
+.skill-meter {
   width: 100%;
-  accent-color: var(--accent);
+  height: 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  margin-top: 0.65rem;
 }
 
-.skill-slider:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
+.skill-meter-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
 }
 
-.slider-lock-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.slider-lock-notice {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+.skill-value {
+  min-width: 3rem;
+  text-align: right;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .skill-value {
