@@ -41,7 +41,7 @@ async function boot() {
 
 function appendPrompt(command) {
   const promptLine = document.createElement('p');
-  promptLine.textContent = `user@portfolio:~$ ${command}`;
+  promptLine.textContent = `jihan@portfolio:~$ ${command}`;
   outputContainer.appendChild(promptLine);
 }
 
