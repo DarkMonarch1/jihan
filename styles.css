@@ -230,7 +230,7 @@ body {
   position: absolute;
   top: 52px;
   right: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.85rem;
@@ -239,10 +239,18 @@ body {
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   min-width: 180px;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+  pointer-events: none;
 }
 
 .menu-dropdown.visible {
-  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .menu-item {
