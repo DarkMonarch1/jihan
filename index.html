@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jihan | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main shell for the page content -->
+  <div class="page-shell">
+    <!-- Hero / top section with name and short description -->
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Jihan</h1>
+        <p class="hero-description">
+          Software developer building clean interfaces and thoughtful user experiences.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#skills">View skills</a>
+        <a class="button button-secondary" href="#projects">See work</a>
+      </div>
+    </header>
+
+    <!-- About section: edit this text to describe yourself -->
+    <section class="section about" id="about">
+      <div class="section-copy">
+        <h2>About me</h2>
+        <p>
+          I create modern web experiences with a strong focus on readability, performance, and design.
+          This site is a starting point for my personal portfolio and the skills shown here are adjustable.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills section: the interactive slider/tab area -->
+    <section class="section skills" id="skills">
+      <div class="section-copy">
+        <h2>Skills</h2>
+        <p>
+          Use the sliders to set how confident you are in each language. The tabs let you switch between categories.
+        </p>
+      </div>
+
+      <div class="skills-card">
+        <!-- Tab buttons for different skill categories -->
+        <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+          <button class="tab active" data-tab="languages" type="button">Languages</button>
+          <button class="tab" data-tab="frameworks" type="button">Frameworks</button>
+          <button class="tab" data-tab="tools" type="button">Tools</button>
+        </div>
+
+        <!-- Languages panel: sliders can be adjusted to reflect your strength -->
+        <div class="skill-panel active" id="languages" role="tabpanel">
+          <div class="skill-row">
+            <label for="java-slider">Java</label>
+            <input id="java-slider" class="skill-slider" type="range" min="0" max="100" value="70" />
+            <span class="skill-value">70%</span>
+          </div>
+          <div class="skill-row">
+            <label for="python-slider">Python</label>
+            <input id="python-slider" class="skill-slider" type="range" min="0" max="100" value="85" />
+            <span class="skill-value">85%</span>
+          </div>
+          <div class="skill-row">
+            <label for="cpp-slider">C++</label>
+            <input id="cpp-slider" class="skill-slider" type="range" min="0" max="100" value="60" />
+            <span class="skill-value">60%</span>
+          </div>
+          <div class="skill-row">
+            <label for="js-slider">JavaScript</label>
+            <input id="js-slider" class="skill-slider" type="range" min="0" max="100" value="75" />
+            <span class="skill-value">75%</span>
+          </div>
+        </div>
+
+        <!-- Frameworks panel: change or expand the listed items as needed -->
+        <div class="skill-panel" id="frameworks" role="tabpanel">
+          <div class="badge-grid">
+            <span class="badge">React</span>
+            <span class="badge">Spring Boot</span>
+            <span class="badge">Django</span>
+            <span class="badge">Node.js</span>
+          </div>
+        </div>
+
+        <!-- Tools panel: swap out tools for the ones you use daily -->
+        <div class="skill-panel" id="tools" role="tabpanel">
+          <div class="badge-grid">
+            <span class="badge">Git</span>
+            <span class="badge">Docker</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">Figma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section: placeholder for your portfolio items -->
+    <section class="section projects" id="projects">
+      <div class="section-copy">
+        <h2>Projects</h2>
+        <p>
+          Showcase your best work here. Replace these blocks with links, images, or descriptions of your projects.
+        </p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Project One</h3>
+          <p>Short description of a project that shows your skills and interests.</p>
+        </article>
+        <article class="project-card">
+          <h3>Project Two</h3>
+          <p>Another project summary. Update this content to reflect your actual work.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript controls tabs and slider value updates -->
+  <script src="script.js"></script>
+</body>
+</html>
